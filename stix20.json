@@ -1,0 +1,3554 @@
+[
+  {
+    "@id": "http://purl.org/cyber/stix#File",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The File Object represents the properties of a file. A File Object MUST contain at least one of hashes or name."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#killChainPhase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Malware"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#killChainPhaseOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Malware",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Note: The Malware object in STIX 2.0 is a stub. It is included to support basic use cases but is likely not useful for actual malware analysis or for including even simple malware instance data. Future versions of STIX 2 will expand it to include these capabilities.\n\n Malware is a type of TTP that is also known as malicious code and malicious software, and refers to a program that is inserted into a system, usually covertly, with the intent of compromising the confidentiality, integrity, or availability of the victim's data, applications, or operating system (OS) or of otherwise annoying or disrupting the victim. Malware such as viruses and worms are usually designed to perform these nefarious functions in such a way that users are unaware of them, at least initially.[1]\n\n The Malware SDO characterizes, identifies, and categorizes malware samples and families via a text description property. This provides detailed information about how the malware works and what it does. Relationships from Malware can capture what the malware targets (Vulnerability and Identity) and link it to another Malware SDO that it is a variant of."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      },
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#mimeType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The value of this property MUST be a valid MIME type as specified in the IANA Media Types registry [Media Types]."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#IntrusionSet",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Intrusion Set is a grouped set of adversarial behaviors and resources with common properties that is believed to be orchestrated by a single organization. An Intrusion Set may capture multiple Campaigns or other activities that are all tied together by shared attributes indicating a common known or unknown Threat Actor. New activity can be attributed to an Intrusion Set even if the Threat Actors behind the attack are not known. Threat Actors can move from supporting one Intrusion Set to supporting another, or they may support multiple Intrusion Sets.\n\nWhere a Campaign is a set of attacks over a period of time against a specific set of targets to achieve some objective, an Intrusion Set is the entire attack package and may be used over a very long period of time in multiple Campaigns to achieve potentially multiple purposes.\n\n While sometimes an Intrusion Set is not active, or changes focus, it is usually difficult to know if it has truly disappeared or ended. Analysts may have varying level of fidelity on attributing an Intrusion Set back to Threat Actors and may be able to only attribute it back to a nation state or perhaps back to an organization within that nation state."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#Adversary"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#duplicateOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x-mitre-contributor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b80"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b80",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Malware"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Tool"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#attack-pattern"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#KillChainPhase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sector",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_defense_bypassed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Organization",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b112"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b112",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b113"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b113",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#identityClass"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b114"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b114",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "organisation"
+          },
+          {
+            "@value": "organization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#AttackPattern",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Attack Patterns are a type of TTP that describe ways that adversaries attempt to compromise targets. Attack Patterns are used to help categorize attacks, generalize specific attacks to the patterns that they follow, and provide detailed information about how attacks are performed. An example of an attack pattern is \"spear phishing\": a common type of attack where an attacker sends a carefully crafted e-mail message to a party with the intent of getting them to click a link or open an attachment to deliver malware. Attack Patterns can also be more specific; spear phishing as practiced by a particular threat actor (e.g., they might generally say that the target won a contest) can also be an Attack Pattern. The Attack Pattern SDO contains textual descriptions of the pattern along with references to externally-defined taxonomies of attacks such as CAPEC [CAPEC]. Relationships from Attack Pattern can be used to relate it to what it targets (Vulnerabilities and Identities) and which tools and malware use it (Tool and Malware)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Sighting",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_data_source",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#country",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#relatedTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_deprecated",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Identity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups (e.g., the finance sector).\n\nThe Identity SDO can capture basic identifying information, contact information, and the sectors that the Identity belongs to. Identity is used in STIX to represent, among other things, targets of attacks, information sources, object creators, and threat actor identities."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#phaseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChainPhase"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChain"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#id",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The id property universally and uniquely identifies this object."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_permissions_required",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#emailProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#EmailMessage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#killChainName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChainPhase"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#specVersion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#definition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#MarkingDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#indicates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Indicator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b33"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b33",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#FilePath",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#objectMarkingOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#confidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#opinion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#language",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Note",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#attack-pattern",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#authoredBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b17"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b17",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Malware"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Tool"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#alias",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Adversary"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Criminal",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b94"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b94",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b95"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b95",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#label"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b96"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b96",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "criminal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#variant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This variantOf relation is used to document that one piece of Malware is a variant of another piece of Malware. For example, TorrentLocker is a variant of CryptoLocker."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Malware"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Malware"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#UserAccount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#attributedTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b5"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#attributionOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Campaign"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#DomainName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Domain Name represents the properties of a network domain name."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#ExternalReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#externalReferenceOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sha-512",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#attributionOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b13"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Campaign"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#belongsTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#hasGranularMarking",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "a GranularMarking that apply to this object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#GranularMarking"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#mitigates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#CourseOfAction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b39"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b39",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Vulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#resolvesTo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#IpAddr"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#macAddr"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#DefinitionObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#statement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#name",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#ThreatActor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Threat Actors are actual individuals, groups, or organizations believed to be operating with malicious intent. A Threat Actor is not an Intrusion Set but may support or be affiliated with various Intrusion Sets, groups, or organizations over time.\n\nThreat Actors leverage their resources, and possibly the resources of an Intrusion Set, to conduct attacks and run Campaigns against targets.\n\nThreat Actors can be characterized by their motives, capabilities, goals, sophistication level, past activities, resources they have access to, and their role in the organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#Adversary"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#targetOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_network_requirements",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#subject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#EmailMessage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#emailProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Mutex",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Mutex Object represents the properties of a mutual exclusion (mutex) object."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#payloadBin",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Artifact"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#WindowsRegistryKey",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Registry Key Object represents the properties of a Windows registry key."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#NationState",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b106"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b106",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b107"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b107",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#label"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b108"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b108",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "nation-state"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Software",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Software Object represents high-level properties associated with software, including software products."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#identityClass",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This property describes the type of entity that the Identity represents: whether it describes an organization, group, individual, class or unknown"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#URL",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The URL Object represents the properties of a uniform resource locator (URL)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#MarkingDefinition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#macAddr",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The MAC Address Object represents a single Media Access Control (MAC) address."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#externalReferenceOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#ExternalReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#StixObservables",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The ObservableType is a complex type representing a description of a single cyber observable."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#usedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b64"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#uses"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b64",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sightingOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Sighting"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b47"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b47",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Indicator"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#StixObservables"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#published",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#hasPhase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChain"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChainPhase"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#phaseOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Protocol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#granularMarkingOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hasGranularMarking"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#source",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Relationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#sourceOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#AutonomousSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Within the Internet, an autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain that presents a common, clearly defined routing policy to the Internet.   An ISP must have an officially registered autonomous system number (ASN). A unique ASN is allocated to each AS for use in BGP routing. AS numbers are important because the ASN uniquely identifies each network on the Internet."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#targets",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b58"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b61"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b58",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b61",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Vulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#provenance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#stixDataProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#phaseName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#KillChainPhase"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Vulnerability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A Vulnerability is \"a mistake in software that can be directly used by a hacker to gain access to a system or network\" [CVE]. For example, if a piece of malware exploits CVE-2015-12345, a Malware object could be linked to a Vulnerability object that references CVE-2015-12345.\n\n The Vulnerability SDO is primarily used to link to external definitions of vulnerabilities or to describe 0-day vulnerabilities that do not yet have an external definition. Typically, other SDOs assert relationships to Vulnerability objects when a specific vulnerability is targeted and exploited as part of malicious cyber activity. As such, Vulnerability objects can be used as a linkage to the asset management and compliance process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#TTP",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "TPP is a Tactic, Technique, or Procedure, i.e., behaviors and resources that attackers use to carry out their attacks"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#indicatedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#indicates"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#skillDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An OWL ontology for representing cybersecurity information using the STIX 2 data model."
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://purl.org/cyber/stix"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sha-224",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sourceOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#FileName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Opinion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#EmailAddr",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Email Address Object represents a single email address."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Ipv4Addr",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The IPv4 Address Object represents one or more IPv4 addresses expressed using CIDR notation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#IpAddr"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#IpAddr",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#revoked",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The revoked property indicates whether the object has been revoked."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Ipv6Addr",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The IPv6 Address Object represents one or more IPv6 addresses expressed using CIDR notation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#IpAddr"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Owner",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#killChainPhaseOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Malware"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#createdBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#creatorOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b20",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Campaign"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Tool",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Tools are legitimate software that can be used by threat actors to perform attacks. Knowing how and when threat actors use such tools can be important for understanding how campaigns are executed. Unlike malware, these tools or software packages are often found on a system and have legitimate purposes for power users, system administrators, network administrators, or even normal users. Remote access tools (e.g., RDP) and network scanning tools (e.g., Nmap) are examples of Tools that may be used by a Threat Actor during an attack.\n\nThe Tool SDO characterizes the properties of these software tools and can be used as a basis for making an assertion about how a Threat Actor uses them during an attack. It contains properties to name and describe the tool, a list of Kill Chain Phases the tool can be used to carry out, and the version of the tool.\n\nThis SDO MUST NOT be used to characterize malware. Further, Tool MUST NOT be used to characterise tools used as part of a course of action in response to an attack. Tools used during response activities can be included directly as part of a Course of Action SDO."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      },
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#StixDomainObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This specification defines the set of STIX Domain Objects (SDOs), each of which corresponds to a unique concept commonly represented in CTI. Using SDOs and STIX relationships as building blocks, individuals can create and share broad and comprehensive cyber threat intelligence.\n\n Property information, relationship information, and examples are provided for each SDO defined below. Property information includes common properties as well as properties that are specific to each SDO. Relationship information includes embedded relationships (e.g., created_by_ref), common relationships (e.g., related-to), and SDO-specific relationships. Forward relationships (i.e., relationships from the SDO to other SDOs) are fully defined, while reverse relationships (i.e., relationships to the SDO from other SDOs) are duplicated for convenience.\n\n Some SDOs are similar and can be grouped together into categories. Attack Pattern, Malware, and Tool can all be considered types of tactics, techniques, and procedures (TTPs): they describe behaviors and resources that attackers use to carry out their attacks. Similarly, Campaign, Intrusion Set, and Threat Actor all describe information about why adversaries carry out attacks and how they organize themselves."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#ObservedData",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Observed Data conveys information that was observed on systems and networks using the Cyber Observable specification defined in parts 3 and 4 of this specification. For example, Observed Data can capture the observation of an IP address, a network connection, a file, or a registry key. Observed Data is not an intelligence assertion, it is simply information: this file was seen, without any context for what it means.\n\nObserved Data captures both a single observation of a single entity (file, network connection) as well as the aggregation of multiple observations of an entity. When the number_observed property is 1 the Observed Data is of a single entity. When the number_observed property is greater than 1, the observed data consists of several instances of an entity collected over the time window specified by the first_observed and last_observed properties. When used to collect aggregate data, it is likely that some fields in the Cyber Observable Object (e.g., timestamp fields) will be omitted because they would differ for each of the individual observations.\n\nObserved Data may be used by itself (without relationships) to convey raw data collected from network and host-based detection tools. A firewall could emit a single Observed Data instance containing a single Network Traffic object for each connection it sees. The firewall could also aggregate data and instead send out an Observed Data instance every ten minutes with an IP address and an appropriate number_observed value to indicate the number of times that IP address was observed in that window.\n\nObserved Data may also be related to other SDOs to represent raw data that is relevant to those objects. The Sighting object, which captures the sighting of an Indicator, Malware, or other SDO, uses Observed Data to represent the raw information that led to the creation of the Sighting (e.g., what was actually seen that suggested that a particular instance of malware was active)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#CourseOfAction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Course of Action is an action taken either to prevent an attack or to respond to an attack that is in progress. It may describe technical, automatable responses (applying patches, reconfiguring firewalls) but can also describe higher level actions like employee training or policy changes. For example, a course of action to mitigate a vulnerability could describe applying the patch that fixes it.\n\nThe Course of Action SDO contains a textual description of the action; a reserved action property also serves as placeholder for future inclusion of machine automatable courses of action. Relationships from the Course of Action can be used to link it to the Vulnerabilities or behaviors (Tool, Malware, Attack Pattern) that it mitigates."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#user_id",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#UserAgent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#creatorOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b24"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b24",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Campaign"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#IntrusionSet"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x-mitre-property",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Adversary",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#mitigatedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b36"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#CourseOfAction"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#mitigates"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b36",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Vulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#ownerOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Owner"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#goals",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Adversary"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#opinionAbout",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#opinion"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Artifact",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The Artifact Object permits capturing an array of bytes (8-bits), as a base64-encoded string, or linking to a file-like payload. The size of the base64-encoded data captured in the payload_bin property MUST be less than or equal to 10MB.\n\nOne of payload_bin or url MUST be provided. It is incumbent on object creators to ensure that the URL is accessible for downstream consumers. If a URL is provided, then the hashes property MUST contain the hash of the URL contents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_alias",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b85"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b85",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Malware"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Tool"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#vendor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Specifies the name of the vendor of the software"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Software"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#relationshipType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Relationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#CrimeSyndicate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b88"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b88",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b89"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b89",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#label"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b90"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b90",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "crime-syndicate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sightedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b42"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Sighting"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#sightingOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b42",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Indicator"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#StixObservables"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#objectMarking",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "a marking-definition object to be applied to this object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#MarkingDefinition"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#objectMarkingOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Terrorist",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b125"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b125",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b126"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b126",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#label"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b127"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b127",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "terrorist"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_platform",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#object",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Campaign",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Campaign is a grouping of adversarial behaviors that describes a set of malicious activities or attacks (sometimes called waves) that occur over a period of time against a specific set of targets. Campaigns usually have well defined objectives and may be part of an Intrusion Set. \n\nCampaigns are often attributed to an intrusion set and threat actors. The threat actors may reuse known infrastructure from the intrusion set or may set up new infrastructure specific for conducting that campaign.\n\nCampaigns can be characterized by their objectives and the incidents they cause, people or resources they target, and the resources (infrastructure, intelligence, Malware, Tools, etc.) they use.\n\nFor example, a Campaign could be used to describe a crime syndicate's attack using a specific variant of malware and new C2 servers against the executives of ACME Bank during the summer of 2016 in order to gain secret information about an upcoming merger with another bank."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#Adversary"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#EmailMessage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Email Message Object represents an instance of an email message, corresponding to the internet message format described in [RFC5322] and related RFCs.\n\nHeader field values that have been encoded as described in section 2 of [RFC2047] MUST be decoded before inclusion in Email Message Object properties. For example, this is some text MUST be used instead of =?iso-8859-1?q?this=20is=20some=20text?=. Any characters in the encoded value which cannot be decoded into Unicode SHOULD be replaced with the 'REPLACEMENT CHARACTER' (U+FFFD). If it is necessary to capture the header value as observed, this can be achieved by referencing an Artifact Object through the raw_email_ref property."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#path",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#File"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sha-1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#GranularMarking",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#exploits",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b28"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Vulnerability"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Campaign"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Malware"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#attack-pattern"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Indicator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Indicators contain a pattern that can be used to detect suspicious or malicious cyber activity. For example, an Indicator may be used to represent a set of malicious domains and use the STIX Patterning Language (STIX™ Version 2.0. Part 5: STIX Patterning) to specify these domains.\n\nThe Indicator SDO contains a simple textual description, the Kill Chain Phases that it detects behavior in, a time window for when the Indicator is valid or useful, and a required pattern property to capture a structured detection pattern. Conforming STIX implementations MUST support the STIX Patterning Language as defined in STIX™ Version 2.0. Part 5: STIX Patterning. While each structured pattern language has different syntax and potentially different  semantics, in general an Indicator is considered to have \"matched\" (or been \"sighted\") when the conditions specified in the structured pattern are satisfied in whatever context they are evaluated in.\n\n Relationships from the Indicator can describe the malicious or suspicious behavior that it directly detects (Malware, Tool, and Attack Pattern) as well as the Campaigns, Intrusion Sets, and Threat Actors that it might indicate the presence of."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_effective_permission",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_tactic_type",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Process Object represents common properties of an instance of a computer program as executed on an operating system. A Process Object MUST contain at least one property (other than type) from this object (or one of its extensions)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#stixName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#type",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The type property identifies the type of STIX Object (SDO, Relationship Object, etc). The value of the type field MUST be one of the types defined by a STIX Object (e.g., indicator)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#value",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#hash",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#File"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#target",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Relationship"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#targetOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_remote_support",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_resources_required",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#platform",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b70"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b70",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "Android"
+          },
+          {
+            "@value": "Linux"
+          },
+          {
+            "@value": "Windows"
+          },
+          {
+            "@value": "iOS"
+          },
+          {
+            "@value": "macOS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Report",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Reports are collections of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique, including context and related details. They are used to group related threat intelligence together so that it can be published as a comprehensive cyber threat story.\n\nThe Report SDO contains a list of references to SDOs and SROs (the CTI objects included in the report) along with a textual description and the name of the report.\n\nFor example, a threat report produced by ACME Defense Corp. discussing the Glass Gazelle campaign should be represented using Report. The Report itself would contain the narrative of the report while the Campaign SDO and any related SDOs (e.g., Indicators for the Campaign, Malware it uses, and the associated Relationships) would be referenced in the report contents."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#LocalFile",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Port",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#isMultipart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#EmailMessage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#emailProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#label",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#opinion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixDomainObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#body",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#EmailMessage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#emailProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#URLPath",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#skillLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#md5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sha-384",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#NetworkTraffic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The Network Traffic Object represents arbitrary network traffic that originates from a source and is addressed to a destination. The network traffic MAY or MAY NOT constitute a valid unicast, multicast, or broadcast network connection. This MAY also include traffic that is not established, such as a SYN flood.\n\nTo allow for use cases where a source or destination address may be sensitive and not suitable for sharing, such as addresses that are internal to an organization’s network, the source and destination properties (src_ref and dst_ref, respectively) are defined as optional in the properties table below. However, a Network Traffic Object MUST contain the protocols property and at least one of the src_ref or dst_ref properties and SHOULD contain the src_port and dst_port properties."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#X509Certificate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The X.509 Certificate Object represents the properties of an X.509 certificate, as defined by ITU recommendation X.509 [X.509]. An X.509 Certificate Object MUST contain at least one property (other than type) from this object."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#uses",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b67"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#TTP"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b67",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#modified",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The modified property represents the time that this particular version of the object was created. The timstamp value MUST be precise to the nearest millisecond."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#commonDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Individual",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b100"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b100",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b101"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b101",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#identityClass"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b102"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b102",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "individual"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#derivedFrom",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#authorOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#authoredBy"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#definitionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#MarkingDefinition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Spy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b119"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b119",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#ThreatActor"
+          },
+          {
+            "@id": "_:nfdc043717a67403fa25d93e980998596b120"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b120",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/cyber/stix#label"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b121"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b121",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#oneOf": [
+      {
+        "@list": [
+          {
+            "@value": "spy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#x_mitre_system_requirement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#attack-pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#x-mitre-property"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#KillChain",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#commonDataProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "a collection of data properties that can be used with any stix object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#owner",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Owner"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#exploitedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#exploits"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#impersonates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This Relationship describes that the Threat Actor impersonates the related Identity. For example, an  impersonates Relationship from the gh0st Threat Actor to the ACME Corp. Identity means that the actor known as gh0st impersonates ACME Corp."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#ThreatActor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.org/cyber/stix#Identity"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#StixThing",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#sha-256",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#hash"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#size",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#File"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#int"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#tlp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#version",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Specifies the version of the software"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b76"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b76",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#File"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Software"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#X509Certificate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#UserAgent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixObservables"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#Relationship",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "he Relationship object is used to link together two SDOs in order to describe how they are related to each other. If SDOs are considered \"nodes\" or \"vertices\" in the graph, the Relationship Objects (SROs) represent \"edges\".\n\nSTIX defines many relationship types to link together SDOs. These relationships are contained in the \"Relationships\" table under each SDO definition. Relationship types defined in the specification SHOULD be used to ensure consistency. An example of a specification-defined relationship is that an indicator indicates a campaign. That relationship type is listed in the Relationships section of the Indicator SDO definition.\n\nSTIX also allows relationships from any SDO to any SDO that have not been defined in this specification. These relationships MAY use the related-to relationship type or MAY use a custom relationship type. As an example, a user might want to link malware directly to a tool. They can do so using related-to to say that the Malware is related to the Tool but not describe how, or they could use delivered-by (a custom name they determined) to indicate more detail.\n\nNote that some relationships in STIX may seem like \"shortcuts\". For example, an Indicator doesn't really detect a Campaign: it detects activity (Attack Patterns, Malware, etc.) that are often used by that campaign. While some analysts might want all of the source data and think that shortcuts are misleading, in many cases it's helpful to provide just the key points (shortcuts) and leave out the low-level details. In other cases, the low-level analysis may not be known or sharable, while the high-level analysis is. For these reasons, relationships that might appear to be \"shortcuts\" are not excluded from STIX."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#StixThing"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#cpe",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://purl.org/cyber/stix#Software"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#stixDataProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/cyber/stix#targetedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b52"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:nfdc043717a67403fa25d93e980998596b55"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://purl.org/cyber/stix#targets"
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b52",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Identity"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#Vulnerability"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nfdc043717a67403fa25d93e980998596b55",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://purl.org/cyber/stix#Adversary"
+          },
+          {
+            "@id": "http://purl.org/cyber/stix#TTP"
+          }
+        ]
+      }
+    ]
+  }
+]
